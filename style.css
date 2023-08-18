@@ -1,0 +1,58 @@
+body{
+    background-color: black;
+   
+}
+
+h1{
+    color:#F86041;
+    text-align: center;
+    padding: 20px;
+    font-size: 60px;
+    animation: fade 2s forwards 0s;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+   
+    
+}
+.option{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+}
+
+button{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    background-color: black;
+    color: #F86041;
+    border-radius: 10%;
+    height: 300px;
+    width: 300px;
+    border: 1px solid #F86041;
+    text-align: center;
+}
+
+#result , #choice{
+    color: #F86041;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    text-align: center;
+
+}

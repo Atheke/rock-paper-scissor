@@ -1,3 +1,4 @@
+const choices = ["Rock","Paper","Scissor"];
 
 function getComputerChoice(choices)
 {
@@ -6,31 +7,47 @@ function getComputerChoice(choices)
     return randomIndex;
 
 }
+
+function getPlayerSelection(e)
+{
+    let userchoice = this.textContent;
+    let computerChoice = getComputerChoice(choices);
+    user = choices.indexOf(userchoice); //stores the list index of the entered user choice
+    playRound(computerChoice , user);
+
+}
+
 //calculates the winner using list based indexing
 function playRound(computer , user)
 {
+    
+    let result = document.querySelector('#result');
+    let choice = document.querySelector('#choice');
+    choice.textContent = "Computer chose "+choices[computer];
     if(computer > user)
     {
         if(computer - user == 1)
-            cconsole.log("Sad ypu lost the round");
+        {
+
+            result.textContent = "Sad you lost the round";
+        }
+           
         else
-            console.log("Yay you won the round");
+            result.textContent = "Yay you won the round";
+            
     }
     else if(computer < user)
     {
         if(user - computer == 1)
-            console.log("Yay you won the round");
+           result.textContent = "Yay you won the round";
         else
-            console.log("Sad you lost the round");
+            result.textContent = "Sad you lost the round";
     }
     else
-        console.log("Its a draw");
-
+        result.textContent = "Its a draw";
 }
 
-const choices = ["Rock","Paper","Scissor"];
-const computerChoice = getComputerChoice(choices);
-console.log("Computer chose ",choices[computerChoice]);
-const userChoice = prompt("Enter your choice");
-const user = choices.indexOf(userChoice); //stores the list index of the entered user choice
-playRound(computerChoice , user);
+const userChoice = document.querySelectorAll('button');
+userChoice.forEach(userChoice => userChoice.addEventListener('click',getPlayerSelection));
+
+
