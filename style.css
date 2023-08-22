@@ -6,9 +6,10 @@ body{
 h1{
     color:#F86041;
     text-align: center;
-    padding: 20px;
+    padding: 5%;
     font-size: 60px;
     animation: fade 2s forwards 0s;
+    line-break: 1;
 }
 
 @keyframes fade{
@@ -24,7 +25,7 @@ h1{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 2%;
    
     
 }
@@ -33,7 +34,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 2rem;
 
 }
 
@@ -43,8 +44,8 @@ button{
     background-color: black;
     color: #F86041;
     border-radius: 10%;
-    height: 300px;
-    width: 300px;
+    height: 5em;
+    width: 6em;
     border: 1px solid #F86041;
     text-align: center;
 }
@@ -52,7 +53,16 @@ button{
 #result , #choice{
     color: #F86041;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 45px;
+    font-size: 3em;
     text-align: center;
 
+}
+
+@media (max-width:800px){
+    .option{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
 }
